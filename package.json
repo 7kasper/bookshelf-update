@@ -1,0 +1,27 @@
+{
+  "name": "bookshelf-update",
+  "version": "1.0.0",
+  "description": "Simple bookshelf plugin that allows simple patching of models and skips updating if no values have changed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7kasper/bookshelf-update.git"
+  },
+  "keywords": [
+    "bookshelf",
+    "bookshelf.js",
+    "bookshelfjs",
+    "plugin",
+    "update",
+    "knex"
+  ],
+  "author": "7kasper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/7kasper/bookshelf-update/issues"
+  },
+  "homepage": "https://github.com/7kasper/bookshelf-update#readme"
+}
