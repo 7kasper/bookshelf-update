@@ -1,5 +1,9 @@
 # bookshelf-update
-Simple [Bookshelf.js](http://bookshelfjs.org) plugin that allows simple patching of models and skips updating if no values have changed.
+Simple [Bookshelf.js](http://bookshelfjs.org) plugin that allows simple 
+patching of models and skips updating if no values have changed.
+
+See also: [bookshelf-spotparse](https://www.npmjs.com/package/bookshelf-spotparse), 
+a plugin that makes formatting, parsing and finding models easier.
 
 ## Installation
 * Install with npm using `npm i bookshelf-update`
