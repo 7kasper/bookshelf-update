@@ -1,6 +1,6 @@
 {
   "name": "bookshelf-update",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple bookshelf plugin that allows simple patching of models and skips updating if no values have changed.",
   "main": "index.js",
   "scripts": {
