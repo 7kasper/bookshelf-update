@@ -1,10 +1,10 @@
 module.exports = (bookshelf) => {
-  class UpdateModel extends bookshelf.Model {
+  bookshelf.Model = bookshelf.Model.extend({
     async update() {
       if (this.isNew()) {
         // If the model is new do regular save instead of update.
         return await this.save();
-      } else if (this.changed) {
+      } else if (Object.entries(this.changed).length !== 0) {
         // Otherwise only update the changes if present.
         return await this.save(this.changed, {patch: true});
       } else {
@@ -12,6 +12,5 @@ module.exports = (bookshelf) => {
         return this;
       }
     }
-  }
-  bookshelf.Model = UpdateModel;
+  });
 }
