@@ -1,6 +1,15 @@
 # bookshelf-update
 Simple [Bookshelf.js](http://bookshelfjs.org) plugin that allows simple patching of models and skips updating if no values have changed.
 
+## Installation
+* Install with npm using `npm i bookshelf-update`
+* After creating a bookshelf instance, call the plugin method:
+```javascript
+const bookshelf = require('bookshelf')(knex);
+bookshelf.plugin('bookshelf-update');
+```
+* The update method can now be used on all your models.
+
 ## Example
 ```javascript
 /**
