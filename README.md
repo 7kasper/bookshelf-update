@@ -39,6 +39,18 @@ User.where({username: 'ernie'}).fetch()
 .then(usr => console.dir(usr))
 .catch(err => console.log(err));
 });
+
+/**
+ * When creating a user with the ID already specified
+ * you might need to force an insert like so:
+ */
+new User({
+    id: '11',
+    username: 'ernie',
+    password: 'meepmoop',
+}).update({forceInsert: true})
+.then(usr => console.dir(usr))
+.catch(err => console.log(err));
 ```
 
 ## Working

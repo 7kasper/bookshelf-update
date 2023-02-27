@@ -1,9 +1,9 @@
 module.exports = (bookshelf) => {
   bookshelf.Model = bookshelf.Model.extend({
-    async update() {
-      if (this.isNew()) {
-        // If the model is new do regular save instead of update.
-        return await this.save();
+    async update(params = {}) {
+      if (this.isNew() || params.forceInsert) {
+        // If the model is new do a forced insert save instead of update.
+        return await this.save({method: 'insert'});
       } else if (Object.entries(this.changed).length !== 0) {
         // Otherwise only update the changes if present.
         return await this.save(this.changed, {patch: true});
